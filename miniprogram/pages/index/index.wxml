@@ -1,0 +1,28 @@
+<view wx:if='{{showLogin}}' class="map">
+  <map class='map' id='myMap' show-location scale="{{scale}}" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" bindcallouttap="toAddress" bindmarkertap="setMarker">
+    <cover-view class="btn-wrap">
+      <cover-view class="btn-1 border" bindtap="onMyLocation">我的位置</cover-view>
+      <cover-view class="btn-2 border" bindtap="record">打卡</cover-view>
+      <cover-view class="btn-3 border" bindtap="toCateDetail">美食软文</cover-view>
+    </cover-view>
+  </map>
+</view>
+<view wx:else class="">
+  <view wx:if='{{!openid}}' class="container {{hasUserInfo ? 'hasUserInfo' : ''}}">
+    <view wx:if='{{hasUserInfo}}' class="logined">
+      <view>没落英雄微信机器人申请使用你的用户信息</view>
+      <view>(头像、微信昵称)</view>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+      {{userInfo.nickName}}
+      <button class="userinfo-nickname" bindtap="onGetOpenid">确定登录</button>
+    </view>
+    <view class="authorize" wx:else>
+      <button class="userinfo-nickname" bindtap="getUserProfile">授权登录</button>
+      <button class="userinfo-cancel" bindtap="onCancel">取消</button>
+    </view>
+  </view>
+  <view wx:else class="success">
+    <icon class="icon-box-img" type="success" size="93"></icon>
+    <view class="">登录成功。</view>
+  </view>
+</view>

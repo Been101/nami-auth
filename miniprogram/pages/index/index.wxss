@@ -1,0 +1,73 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  height: 100%;
+}
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logined {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.userinfo-avatar {
+  margin: 50rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.authorize {
+  margin-top: 200rpx;
+}
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #1aad19;
+  background-size: cover;
+}
+
+.userinfo-cancel {
+  margin-top: 30rpx;
+  border: 1rpx solid #aaa;
+}
+
+.success {
+  display: flex;
+  margin-top: 50rpx;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-wrap {
+  position: absolute;
+  bottom: 30rpx;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+  padding: 20rpx;
+  border-radius: 16rpx;
+  color: rgb(230, 56, 55);
+  background-color: #f6f6f6;
+}
